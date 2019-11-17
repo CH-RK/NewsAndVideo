@@ -1,0 +1,30 @@
+<!-- <ul>
+    <li *ngFor="let details of information.articles">
+        {{details.author}}
+    </li>
+</ul> -->
+
+<i *ngIf="loading" class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+
+
+<div *ngIf="!loading">
+    <table class="table">
+        <thead>
+       <tr>
+           <th>Author</th>
+           <th>Information</th>
+           <th>Description</th>
+       </tr>
+    </thead>
+    <tbody>
+           
+
+       <tr *ngFor="let details of information.articles">
+           <td>{{details.author}}</td>
+           <td>{{details.content}}</td>
+           <td>{{details.description}}</td>
+           <td><img src="{{details.urlToImage}}" width="250px" height="250px;"></td>
+       </tr>
+    </tbody>
+    </table>
+</div>
